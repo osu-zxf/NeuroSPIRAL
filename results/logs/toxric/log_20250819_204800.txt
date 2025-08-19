@@ -1,0 +1,2 @@
+08-19 20:51 root         INFO     Epoch: 001, Loss: 0.4530, Train AUC: 0.8423, Val AUC: 0.8401
+08-19 20:51 root         INFO     Model saved to results/ckpts/toxric/model_epoch_1.pth
