@@ -34,15 +34,26 @@ conda activate neurospiral
 To solve toxicity prediction task, run the following command to run it for Tox21 dataset.
 
 ```
+python ToxerForTox21.py --eval
+```
+
+For Toxcast dataset and TOXRIC dataset, first modify the `best_model_path` in `neurospiral/parse_args.py`, then run
+
+```
+python ToxerForToxcast.py --eval
+python ToxerForToxric.py --eval
+```
+
+### Train
+Run following commond
+
+```
 python ToxerForTox21.py
-```
-
-For Toxcast dataset and TOXRIC dataset, just run
-
-```
 python ToxerForToxcast.py
 python ToxerForToxric.py
 ```
+
+The models are saved in `results/ckpts/{dataset_name}/`.
 
 For further details, see Online Methods of our paper. 
 
