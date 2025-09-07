@@ -11,7 +11,7 @@ parser.add_argument('--save_epoch_int', type=int, default=1)
 parser.add_argument('--model_folder', default='results/ckpts')
 parser.add_argument('--result_folder', default='results/logs')
 parser.add_argument('--eval', action='store_true')
-parser.add_argument('--best_model_path', default='results/ckpts/tox21/model_epoch_1.pth')
+parser.add_argument('--best_model_path', default='results/ckpts/tox21/model_best.pth')
 parser.add_argument('--dataset', type=str, default='toxcast', choices=['toxcast', 'tox21', 'toxric'])
 args = parser.parse_args()
 
