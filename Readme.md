@@ -20,7 +20,7 @@ NeuroSPIRAL is built on a dynamically expandable hierarchical motif library, ena
 ### OS Requirements
 This package is supported for Linux. The package has been tested on the following system:
 
-Linux: Ubuntu 20.04
+Linux: Ubuntu 20.04 with 8*RTX 4090
 
 ## Installation Guide
 ### Step 1. Setup the environment
@@ -37,7 +37,7 @@ To solve toxicity prediction task, run the following command to run it for Tox21
 python ToxerForTox21.py --eval
 ```
 
-For Toxcast dataset and TOXRIC dataset, first modify the `best_model_path` in `neurospiral/parse_args.py`, then run
+For Toxcast dataset and TOXRIC dataset, first modify the `best_model_path` in `neurospiral/parse_args.py` to `results/ckpts/toxcast/model_best.pth` or `results/ckpts/toxric/model_best.pth`, respectively. Then run the following command:
 
 ```
 python ToxerForToxcast.py --eval
@@ -45,7 +45,7 @@ python ToxerForToxric.py --eval
 ```
 
 ### Train
-Run following commond
+Run the following commond
 
 ```
 python ToxerForTox21.py
@@ -53,7 +53,7 @@ python ToxerForToxcast.py
 python ToxerForToxric.py
 ```
 
-The models are saved in `results/ckpts/{dataset_name}/`.
+The models are saved in `results/ckpts/{dataset_name}/`. The evaluation results on the training and validation sets are saved in results/logs/{dataset_name}. You may select the model checkpoint with the best performance on the validation set as the final weights for testing (the `best_model_path` parameter used in the eval section).
 
 For further details, see Online Methods of our paper. 
 
